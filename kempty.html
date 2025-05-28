@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kempty Falls Experience</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f9ff;
+      color: #1a1a1a;
+      margin: 0; padding: 0;
+    }
+    header, footer {
+      background: #023e8a;
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 900;
+      letter-spacing: 2px;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+    main {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .info-cards {
+      display: flex;
+      gap: 1.5rem;
+      margin: 3rem 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      background: #fff;
+      flex: 1 1 220px;
+      min-width: 220px;
+      padding: 1.5rem 1.75rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 14px 28px rgba(2, 62, 138, 0.3), 0 10px 10px rgba(2, 62, 138, 0.2);
+      cursor: pointer;
+    }
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+      color: #023e8a;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .card p {
+      line-height: 1.5;
+      color: #444;
+      font-size: 1rem;
+      flex-grow: 1;
+    }
+
+    @media (max-width: 700px) {
+      .info-cards {
+        flex-direction: column;
+        margin: 2rem 1rem;
+      }
+      .card {
+        max-width: 100%;
+      }
+    }
+
+    img.hero-img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Kempty Falls</h1>
+  <p>Mussoorie’s Most Iconic Waterfall Retreat</p>
+</header>
+
+<main>
+  <section>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Kempty_Falls_in_Mussoorie.jpg" alt="Kempty Falls" class="hero-img" />
+  </section>
+
+  <section class="info-cards">
+    <article class="card">
+      <h3>Perfect Time to Visit</h3>
+      <p>March to June: Escape summer heat, enjoy refreshing dips, and explore lush greenery in full bloom.</p>
+    </article>
+
+    <article class="card">
+      <h3>Why Visit?</h3>
+      <p>Experience cascading waters in a natural pool setting, perfect for families, swimmers, and thrill-seekers alike.</p>
+    </article>
+
+    <article class="card">
+      <h3>Best Routes</h3>
+      <p>Located 15 km from Mussoorie; accessible via road, cable car, or even by foot for adventurous hikers.</p>
+    </article>
+
+    <article class="card">
+      <h3>Local Tips</h3>
+      <p>Arrive early, rent changing rooms, avoid weekends, try street food nearby, and don’t miss the cable ropeway views.</p>
+    </article>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Kempty Falls Experience. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

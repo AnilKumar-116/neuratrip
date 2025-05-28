@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mountains of India</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to bottom, #ffffff, #e0f7fa);
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      perspective: 1000px;
+      transition: transform 0.3s ease;
+      transform-style: preserve-3d;
+    }
+
+    .card:hover {
+      transform: rotateY(5deg) scale(1.02);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-body {
+      padding: 1rem;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: #34495e;
+    }
+
+    .card-subtitle {
+      color: #16a085;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .card-desc {
+      font-size: 0.9rem;
+      color: #7f8c8d;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: #c70b0b;
+      color: white;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 0.9rem;
+    }
+
+    #map {
+      margin-top: 4rem;
+      height: 400px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .quiz-placeholder {
+      margin-top: 4rem;
+      text-align: center;
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+<h1>🏔️ Mountains of India</h1>
+<div class="grid">
+
+  <!-- Kangchenjunga -->
+  <div class="card">
+    <img src="https://img.freepik.com/free-photo/beautiful-nature-landscape-with-mountains_23-2150706073.jpg" alt="Kangchenjunga">
+    <div class="card-body">
+      <div class="card-title">Kangchenjunga</div>
+      <div class="card-subtitle">8,586 m – Sikkim</div>
+      <div class="card-desc">The third highest mountain in the world, revered by locals as sacred.</div>
+      <a href="kanchenjanga.html" class="btn">View More</a>
+    </div>
+  </div>
+
+  <!-- Nanda Devi -->
+  <div class="card">
+    <img src="https://img.freepik.com/premium-photo/beautiful-landscape-view-mount-fishtail-nepal_131480-208.jpg" alt="Nanda Devi">
+    <div class="card-body">
+      <div class="card-title">Nanda Devi</div>
+      <div class="card-subtitle">7,816 m – Uttarakhand</div>
+      <div class="card-desc">Once India's highest peak; part of a stunning biosphere reserve.</div>
+      <a href="nandadevi.html" class="btn">View More</a>
+    </div>
+  </div>
+
+  <!-- Shivling -->
+  <div class="card">
+    <img src="https://img.freepik.com/premium-photo/mountain-peak-against-clear-sky_1048944-24052163.jpg" alt="Shivling Peak">
+    <div class="card-body">
+      <div class="card-title">Shivling</div>
+      <div class="card-subtitle">6,543 m – Gangotri</div>
+      <div class="card-desc">Named after the Hindu deity Shiva, this peak is a climber’s dream.</div>
+      <a href="shivling.html" class="btn">View More</a>
+    </div>
+  </div>
+
+  <!-- Trisul -->
+  <div class="card">
+    <img src="https://img.freepik.com/free-photo/beautiful-mountain-landscape_23-2150724847.jpg" alt="Trisul">
+    <div class="card-body">
+      <div class="card-title">Trisul</div>
+      <div class="card-subtitle">7,120 m – Uttarakhand</div>
+      <div class="card-desc">Named after Lord Shiva's trident, this trio of peaks is a Himalayan icon.</div>
+      <a href="trishul.html" class="btn">View More</a>
+    </div>
+  </div>
+
+  <!-- Dhaulagiri (East) -->
+  <div class="card">
+    <img src="https://img.freepik.com/free-photo/beautiful-landscape-snowcovered-mountains-with-paraglider-south-tyrol-dolomites-italy_181624-30091.jpg" alt="Dhaulagiri">
+    <div class="card-body">
+      <div class="card-title">Dhaulagiri Range (East)</div>
+      <div class="card-subtitle">Extends to NE India</div>
+      <div class="card-desc">Snow-clad giants that form a frontier between India and Nepal.</div>
+      <a href="dhaulagiri.html" class="btn">View More</a>
+    </div>
+  </div>
+
+  <!-- Guru Shikhar -->
+  <div class="card">
+    <img src="https://img.freepik.com/free-photo/aerial-shot-snowy-mountains-with-clear-sky-daytime_181624-5113.jpg" alt="Guru Shikhar">
+    <div class="card-body">
+      <div class="card-title">Guru Shikhar</div>
+      <div class="card-subtitle">1,722 m – Rajasthan</div>
+      <div class="card-desc">Highest peak of the Aravalli Range with a spiritual and panoramic aura.</div>
+      <a href="gurushikar.html" class="btn">View More</a>
+    </div>
+  </div>
+
+  <!-- Anamudi -->
+  <div class="card">
+    <img src="https://media.istockphoto.com/id/1272099882/photo/beautiful-hills-in-the-western-ghats-against-banasura-sagar-dam-wayanad-kerala.webp?a=1&b=1&s=612x612&w=0&k=20&c=6C4xG6MkIMkhF-mTTtoQEDyrXudRgHGYY3C9A1CrXd4=" alt="Anamudi">
+    <div class="card-body">
+      <div class="card-title">Anamudi</div>
+      <div class="card-subtitle">2,695 m – Kerala</div>
+      <div class="card-desc">Tallest peak in South India, nestled in the lush Western Ghats.</div>
+      <a href="anamudi.html" class="btn">View More</a>
+    </div>
+  </div>
+
+  <!-- Bandarpunch -->
+  <div class="card">
+    <img src="https://media.istockphoto.com/id/1454149985/photo/mountains.jpg?s=612x612&w=0&k=20&c=jgHLH82Pv5O83nFN3FPCff79XliT1IoQ-McT54H7OSg=" alt="Bandarpunch">
+    <div class="card-body">
+      <div class="card-title">Bandarpunch</div>
+      <div class="card-subtitle">6,316 m – Uttarakhand</div>
+      <div class="card-desc">Said to be Hanuman’s tail; a mystic blend of mythology and mountaineering.</div>
+      <a href="bandarpunch.html" class="btn">View More</a>
+    </div>
+  </div>
+
+  <!-- Stok Kangri -->
+  <div class="card">
+    <img src="https://media.istockphoto.com/id/821497344/photo/snow-mountain-view-in-leh-ladakh-india.jpg?s=612x612&w=0&k=20&c=mA6QVUdSEt4032Ph5K6Vy_2ie_oQckhsz9NVyAiM0AA=" alt="Stok Kangri">
+    <div class="card-body">
+      <div class="card-title">Stok Kangri</div>
+      <div class="card-subtitle">6,153 m – Ladakh</div>
+      <div class="card-desc">A high-altitude trekker’s dream in the stark beauty of Zanskar Range.</div>
+      <a href="stokkangri.html" class="btn">View More</a>
+    </div>
+  </div>
+
+</div>
+
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+
+</body>
+</html>

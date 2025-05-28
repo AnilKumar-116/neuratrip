@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tirupati Temple - Why, When & Route</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; padding: 2rem;
+    min-height: 100vh;
+    display: flex; justify-content: center; align-items: center;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    /* Deep blue gradient simulating twilight sky */
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Subtle glowing orb shapes to add mystic ambiance */
+  body::before {
+    content: "";
+    position: absolute;
+    top: -100px; left: -100px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle at center, rgba(255, 194, 10, 0.4), transparent 70%);
+    filter: blur(60px);
+    z-index: 0;
+  }
+  body::after {
+    content: "";
+    position: absolute;
+    bottom: -120px; right: -120px;
+    width: 350px; height: 350px;
+    background: radial-gradient(circle at center, rgba(255, 94, 0, 0.35), transparent 70%);
+    filter: blur(70px);
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    width: 100%;
+    z-index: 1;
+  }
+  .card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: saturate(180%) blur(12px);
+  }
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  }
+  h2 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 1.6rem;
+  }
+  p {
+    color: #444;
+    line-height: 1.6;
+  }
+  .why, .when, .route {
+    border-left: 5px solid #f2a900;
+    padding-left: 1rem;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <section class="card why">
+      <h2>Why Visit Tirupati Temple?</h2>
+      <p>Experience the divine energy and spiritual aura of one of India's most sacred pilgrimage sites. Tirupati Temple offers not just religious devotion, but also a deep connection to centuries-old traditions, magnificent architecture, and the serene surroundings of the Tirumala Hills.</p>
+    </section>
+    <section class="card when">
+      <h2>When to Visit Tirupati Temple?</h2>
+      <p>The ideal time to visit is between September and February when the weather is pleasant. Festivals like Brahmotsavam attract millions with grand celebrations, so visiting during these times promises a unique, vibrant cultural experience.</p>
+    </section>
+    <section class="card route">
+      <h2>Route to Tirupati Temple</h2>
+      <p>Tirupati is well-connected by road, rail, and air. The nearest airport is Tirupati Airport (13 km away). Regular trains and buses run from major cities like Chennai, Bangalore, and Hyderabad. Once in Tirupati, local buses and taxis can take you up to the temple hill.</p>
+    </section>
+  </div>
+</body>
+</html>

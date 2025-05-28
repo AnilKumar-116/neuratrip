@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fort Explorer - NeuraTrip</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f8f9fa;
+    }
+
+    header {
+      background: linear-gradient(135deg, #f7b733, #fc4a1a);
+      padding: 2rem;
+      text-align: center;
+      color: white;
+      font-size: 2.5rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      background: white;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fc4a1a;
+      font-weight: bold;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #fc4a1a;
+      transition: width .3s;
+      margin-top: 4px;
+    }
+
+    nav a:hover::after { width: 100%; }
+
+    .hero {
+      background: url('https://upload.wikimedia.org/wikipedia/commons/d/d4/Amber_Fort.jpg') center/cover no-repeat;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+
+    .container {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .card-wrapper {
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1.5rem;
+    }
+
+    .card-content h3 {
+      margin-bottom: 1rem;
+      color: #fc4a1a;
+    }
+
+    .card-content p {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .explore-btn {
+      background: #fc4a1a;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .explore-btn:hover {
+      background: #d63c00;
+    }
+
+    .extra-details {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: #444;
+      display: none;
+    }
+
+    .show {
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 4rem;
+    }
+  </style>
+
+  <script>
+    function toggleDetails(button) {
+      const details = button.nextElementSibling;
+      details.classList.toggle('show');
+    }
+  </script>
+</head>
+
+<body>
+
+<header>FORT EXPLORER 🏰</header>
+
+<nav>
+  <a href="#popular">Popular Forts</a>
+  <a href="#book">Book Now</a>
+</nav>
+
+<div class="hero">
+  Adventure Awaits in Ancient Walls!
+</div>
+
+<div class="container" id="popular">
+
+  <!-- Amber Fort -->
+  <div class="card-wrapper">
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Amber_Fort.jpg" alt="Amber Fort">
+      <div class="card-content">
+        <h3>Amber Fort</h3>
+        <p>Majestic hilltop fort in Jaipur, Rajasthan. Rich with history and stunning views.</p>
+        <p class="price">Entry from $12</p>
+        <button class="explore-btn" onclick="toggleDetails(this)">Explore More</button>
+        <div class="extra-details">
+          Amber Fort is a blend of Hindu and Mughal architecture, with stunning mirror palaces and elephant rides.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mehrangarh Fort -->
+  <div class="card-wrapper">
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Mehrangarh_Fort.jpg" alt="Mehrangarh Fort">
+      <div class="card-content">
+        <h3>Mehrangarh Fort</h3>
+        <p>Massive fort overlooking the blue city of Jodhpur. Awe-inspiring architecture!</p>
+        <p class="price">Entry from $10</p>
+        <button class="explore-btn" onclick="toggleDetails(this)">Explore More</button>
+        <div class="extra-details">
+          One of the largest forts in India with museums, cannonball-scarred walls, and thrilling tales of Rajput valor.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chittorgarh Fort -->
+  <div class="card-wrapper">
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Chittorgarh_Fort.jpg" alt="Chittorgarh Fort">
+      <div class="card-content">
+        <h3>Chittorgarh Fort</h3>
+        <p>The largest fort complex in India, filled with heroic legends and architectural marvels.</p>
+        <p class="price">Entry from $8</p>
+        <button class="explore-btn" onclick="toggleDetails(this)">Explore More</button>
+        <div class="extra-details">
+          Known for tales of Rani Padmini, this UNESCO site includes Vijay Stambh, palaces, and ancient reservoirs.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Red Fort -->
+  <div class="card-wrapper">
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Red_Fort,_Delhi.jpg" alt="Red Fort">
+      <div class="card-content">
+        <h3>Red Fort</h3>
+        <p>The heart of Mughal Delhi, known for its stunning red sandstone walls and historic significance.</p>
+        <p class="price">Entry from $15</p>
+        <button class="explore-btn" onclick="toggleDetails(this)">Explore More</button>
+        <div class="extra-details">
+          Built by Shah Jahan, the fort houses royal gardens, Diwan-i-Aam, and India's Independence Day speech site.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sindhudurg Fort -->
+  <div class="card-wrapper">
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Sindhudurg_Fort.jpg" alt="Sindhudurg Fort">
+      <div class="card-content">
+        <h3>Sindhudurg Fort</h3>
+        <p>Maratha sea fort built by Shivaji on the Arabian Sea. A rare example of naval defense architecture.</p>
+        <p class="price">Entry from $7</p>
+        <button class="explore-btn" onclick="toggleDetails(this)">Explore More</button>
+        <div class="extra-details">
+          Features concealed entrances, coconut palms inside the fort, and Shivaji’s preserved handprint.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Kumbhalgarh Fort -->
+  <div class="card-wrapper">
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Kumbhalgarh_Fort.jpg" alt="Kumbhalgarh Fort">
+      <div class="card-content">
+        <h3>Kumbhalgarh Fort</h3>
+        <p>Home of the second longest wall in the world after the Great Wall of China. Pure defensive genius.</p>
+        <p class="price">Entry from $11</p>
+        <button class="explore-btn" onclick="toggleDetails(this)">Explore More</button>
+        <div class="extra-details">
+          Birthplace of Maharana Pratap and known for its 36 km-long perimeter wall winding through Aravallis.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NEW FORTS BELOW -->
+
+  <!-- Agra Fort -->
+  <div class="card-wrapper">
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Agra_Fort_entrance.jpg" alt="Agra Fort">
+      <div class="card-content">
+        <h3>Agra Fort</h3>
+        <p>UNESCO World Heritage fort with Mughal grandeur and royal chambers near the Taj Mahal.</p>
+        <p class="price">Entry from $13</p>
+        <button class="explore-btn" onclick="toggleDetails(this)">Explore More</button>
+        <div class="extra-details">
+          Constructed of red sandstone by Akbar in 1565, the fort housed generations of Mughal emperors.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Daulatabad Fort -->
+  <div class="card-wrapper">
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Daulatabad_Fort_entrance.jpg" alt="Daulatabad Fort">
+      <div class="card-content">
+        <h3>Daulatabad Fort</h3>
+        <p>Formidable hill fort with a single entrance, deceptive mazes, and steep climbs in Maharashtra.</p>
+        <p class="price">Entry from $5</p>
+        <button class="explore-btn" onclick="toggleDetails(this)">Explore More</button>
+        <div class="extra-details">
+          Famous for its strategic defenses including spike-covered doors, zig-zag paths, and hidden traps.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Jaisalmer Fort -->
+  <div class="card-wrapper">
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Jaisalmer_Fort_2011.jpg" alt="Jaisalmer Fort">
+      <div class="card-content">
+        <h3>Jaisalmer Fort</h3>
+        <p>The Golden Fort rising from the Thar Desert, still inhabited and glowing at sunset.</p>
+        <p class="price">Entry from $8</p>
+        <button class="explore-btn" onclick="toggleDetails(this)">Explore More</button>
+        <div class="extra-details">
+          Built in 1156 AD, this living fort hosts shops, temples, homes, and royal palaces within its walls.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Raigad Fort -->
+  <div class="card-wrapper">
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Raigad_Fort.jpg" alt="Raigad Fort">
+      <div class="card-content">
+        <h3>Raigad Fort</h3>
+        <p>The capital of Shivaji Maharaj’s empire, perched high in the Sahyadris with a ropeway to the top.</p>
+        <p class="price">Entry from $6</p>
+        <button class="explore-btn" onclick="toggleDetails(this)">Explore More</button>
+        <div class="extra-details">
+          Historic coronation site of Chhatrapati Shivaji Maharaj. Offers panoramic views of Konkan valley.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Golconda Fort -->
+  <div class="card-wrapper">
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Golkonda_Fort_Hyderabad.jpg" alt="Golconda Fort">
+      <div class="card-content">
+        <h3>Golconda Fort</h3>
+        <p>Famous for acoustic wonders and diamond trade legacy, once home to the Koh-i-Noor.</p>
+        <p class="price">Entry from $9</p>
+        <button class="explore-btn" onclick="toggleDetails(this)">Explore More</button>
+        <div class="extra-details">
+          Clap at the gate and hear it at the top – a marvel of design. Explore the tombs and underground passages.
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  &copy; 2025 Fort Explorer | Powered by NeuraTrip 🧡
+</footer>
+
+</body>
+</html>

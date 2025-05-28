@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jog Falls Experience</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      color: #222;
+      margin: 0; padding: 0;
+    }
+    header, footer {
+      background: #1e3d59;
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 900;
+      letter-spacing: 2px;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+    main {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    /* Cards container */
+    .info-cards {
+      display: flex;
+      gap: 1.5rem;
+      margin: 3rem 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    /* Individual cards */
+    .card {
+      background: #fff;
+      flex: 1 1 220px;
+      min-width: 220px;
+      padding: 1.5rem 1.75rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: default;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      user-select: none;
+    }
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 14px 28px rgba(30, 61, 89, 0.3), 0 10px 10px rgba(30, 61, 89, 0.2);
+      cursor: pointer;
+    }
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+      color: #1e3d59;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .card p {
+      line-height: 1.5;
+      color: #444;
+      font-size: 1rem;
+      flex-grow: 1;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 700px) {
+      .info-cards {
+        flex-direction: column;
+        margin: 2rem 1rem;
+      }
+      .card {
+        max-width: 100%;
+      }
+    }
+
+    img.hero-img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Jog Falls</h1>
+  <p>India’s Majestic Cascade of Power and Beauty</p>
+</header>
+
+<main>
+  <section>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Jog_falls_2006.jpg" alt="Jog Falls" class="hero-img" />
+  </section>
+
+  <!-- Info Cards Section -->
+  <section class="info-cards">
+    <article class="card">
+      <h3>Perfect Time to Visit</h3>
+      <p>July to October: The monsoon feeds the falls to their thunderous peak, delivering breathtaking views and roaring energy.</p>
+    </article>
+
+    <article class="card">
+      <h3>Why Visit?</h3>
+      <p>Witness the second highest plunge waterfall in India, split into four distinct cascades — a spectacle of nature’s raw power.</p>
+    </article>
+
+    <article class="card">
+      <h3>Best Routes</h3>
+      <p>Travel via Sagara town; trek down scenic paths or take the viewpoint access road for panoramic vistas of the roaring falls.</p>
+    </article>
+
+    <article class="card">
+      <h3>Local Tips</h3>
+      <p>Carry rain gear during monsoon, avoid slippery rocks, visit early morning to catch the misty sunrise, and support local artisans.</p>
+    </article>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Jog Falls Experience. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

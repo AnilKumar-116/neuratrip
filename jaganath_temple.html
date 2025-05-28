@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jagannath Temple - Why, When & Route</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; padding: 2rem;
+    min-height: 100vh;
+    display: flex; justify-content: center; align-items: center;
+    background: linear-gradient(135deg, #4e342e, #f57c00, #6a1b9a);
+    /* Rich earthy orange to royal purple gradient */
+    position: relative;
+    overflow: hidden;
+  }
+  /* Warm glowing orbs like festive lamps */
+  body::before {
+    content: "";
+    position: absolute;
+    top: -80px; left: -80px;
+    width: 280px; height: 280px;
+    background: radial-gradient(circle at center, rgba(245, 124, 0, 0.5), transparent 70%);
+    filter: blur(60px);
+    z-index: 0;
+  }
+  body::after {
+    content: "";
+    position: absolute;
+    bottom: -100px; right: -100px;
+    width: 320px; height: 320px;
+    background: radial-gradient(circle at center, rgba(106, 27, 154, 0.4), transparent 70%);
+    filter: blur(70px);
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    width: 100%;
+    z-index: 1;
+  }
+  .card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: saturate(180%) blur(12px);
+  }
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  }
+  h2 {
+    margin-top: 0;
+    color: #4e342e;
+    font-size: 1.6rem;
+  }
+  p {
+    color: #444;
+    line-height: 1.6;
+  }
+  .why, .when, .route {
+    border-left: 5px solid #f57c00;
+    padding-left: 1rem;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <section class="card why">
+      <h2>Why Visit Jagannath Temple?</h2>
+      <p>Immerse yourself in the spiritual heart of Puri with Jagannath Temple — a vibrant symbol of devotion, legendary Rath Yatra festival, and centuries-old tradition. Witness stunning architecture and a living cultural heritage that resonates with millions.</p>
+    </section>
+    <section class="card when">
+      <h2>When to Visit Jagannath Temple?</h2>
+      <p>The best time to visit is from October to March when the weather is pleasant. Don't miss the grand Rath Yatra festival in June or July, an electrifying celebration that attracts devotees worldwide.</p>
+    </section>
+    <section class="card route">
+      <h2>Route to Jagannath Temple</h2>
+      <p>Puri is accessible by road, rail, and air. The nearest airport is Bhubaneswar Airport (60 km). Frequent trains and buses connect Puri to major cities like Kolkata, Bhubaneswar, and Chennai. Local transport easily takes you to the temple.</p>
+    </section>
+  </div>
+</body>
+</html>

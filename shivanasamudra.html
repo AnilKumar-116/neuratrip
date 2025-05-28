@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shivanasamudra Falls Experience</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f7fafc;
+      color: #222;
+      margin: 0; padding: 0;
+    }
+    header, footer {
+      background: #344e41;
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 900;
+      letter-spacing: 2px;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+    main {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    /* Cards container */
+    .info-cards {
+      display: flex;
+      gap: 1.5rem;
+      margin: 3rem 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    /* Individual cards */
+    .card {
+      background: #fff;
+      flex: 1 1 220px;
+      min-width: 220px;
+      padding: 1.5rem 1.75rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: default;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      user-select: none;
+    }
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 14px 28px rgba(52, 78, 65, 0.3), 0 10px 10px rgba(52, 78, 65, 0.2);
+      cursor: pointer;
+    }
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+      color: #344e41;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .card p {
+      line-height: 1.5;
+      color: #444;
+      font-size: 1rem;
+      flex-grow: 1;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 700px) {
+      .info-cards {
+        flex-direction: column;
+        margin: 2rem 1rem;
+      }
+      .card {
+        max-width: 100%;
+      }
+    }
+
+    img.hero-img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Shivanasamudra Falls</h1>
+  <p>The Twin Cascades of Karnataka’s Natural Wonder</p>
+</header>
+
+<main>
+  <section>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Shivanasamudra_Falls.jpg" alt="Shivanasamudra Falls" class="hero-img" />
+  </section>
+
+  <!-- Info Cards Section -->
+  <section class="info-cards">
+    <article class="card">
+      <h3>Perfect Time to Visit</h3>
+      <p>August to November: Post-monsoon months when the falls are at full roar, surrounded by lush greenery and mist.</p>
+    </article>
+
+    <article class="card">
+      <h3>Why Visit?</h3>
+      <p>Witness one of India’s first hydroelectric power stations beside stunning twin waterfalls, a blend of nature and engineering marvel.</p>
+    </article>
+
+    <article class="card">
+      <h3>Best Routes</h3>
+      <p>Accessible via Mysore or Bangalore; take the road to Srirangapatna and onward to Shivanasamudra for a scenic drive.</p>
+    </article>
+
+    <article class="card">
+      <h3>Local Tips</h3>
+      <p>Visit early morning to avoid crowds, pack light rain gear during monsoon, explore nearby temples, and respect the serene environment.</p>
+    </article>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Shivanasamudra Experience. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

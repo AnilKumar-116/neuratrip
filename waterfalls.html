@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Waterfall Explorer - India's Natural Marvels</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; background: #e0f7fa; color: #333; }
+    header {
+      background: linear-gradient(120deg, #00c6ff, #0072ff);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    header h1 { font-size: 3rem; margin-bottom: 1rem; }
+    header p { font-size: 1.2rem; }
+
+    nav {
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      text-decoration: none;
+      color: #0072ff;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #00c6ff; }
+
+    .hero {
+      background: url('https://source.unsplash.com/1600x700/?waterfall,nature') center/cover no-repeat;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 4px #000;
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+
+    .section {
+      padding: 3rem 2rem;
+    }
+    .section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #0072ff;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-body {
+      padding: 1rem;
+      text-align: center;
+    }
+    .card-body h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+    .card-body p {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+    .card-body a button {
+      background: #00c6ff;
+      color: white;
+      padding: 0.6rem 1.4rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s;
+      font-size: 1rem;
+    }
+    .card-body a button:hover {
+      background: #0072ff;
+    }
+    /* Remove underline on links */
+    .card-body a {
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #0072ff;
+      color: white;
+      font-size: 0.9rem;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Waterfall Explorer</h1>
+  <p>Witness Nature's Greatest Spectacles</p>
+</header>
+
+<nav>
+  <a href="#nohkalikai">Nohkalikai</a>
+  <a href="#dudhsagar">Dudhsagar</a>
+  <a href="#jog">Jog Falls</a>
+  <a href="#shivanasamudra">Shivanasamudra</a>
+  <a href="#others">Others</a>
+  <a href="#athirappilly">Athirappilly</a>
+  <a href="#bhagsu">Bhagsu</a>
+  <a href="#kempty">Kempty</a>
+  <a href="#shivganga">Shivganga</a>
+  <a href="#kunzum">Kunzum</a>
+</nav>
+
+<div class="hero">
+  Discover India's Majestic Waterfalls
+</div>
+
+<div class="section">
+  <h2>💧 India's Most Iconic Waterfalls</h2>
+  <div class="card-grid">
+
+    <div class="card" id="nohkalikai">
+      <img src="https://source.unsplash.com/400x300/?nohkalikai,waterfall" alt="Nohkalikai Falls" />
+      <div class="card-body">
+        <h3>Nohkalikai Falls</h3>
+        <p>Meghalaya | 335m tall | Highest plunge waterfall in India</p>
+        <a href="Nohkalikai.html">
+          <button>View Tours</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="card" id="dudhsagar">
+      <img src="https://source.unsplash.com/400x300/?dudhsagar,waterfall" alt="Dudhsagar Falls" />
+      <div class="card-body">
+        <h3>Dudhsagar Falls</h3>
+        <p>Goa | Milky cascades through lush jungles</p>
+        <a href="dudhsagar.html">
+          <button>View Tours</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="card" id="jog">
+      <img src="https://source.unsplash.com/400x300/?jogfalls,waterfall" alt="Jog Falls" />
+      <div class="card-body">
+        <h3>Jog Falls</h3>
+        <p>Karnataka | 4 majestic drops | 253m height</p>
+        <a href="jog.html">
+          <button>View Tours</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="card" id="shivanasamudra">
+      <img src="https://source.unsplash.com/400x300/?shivanasamudra,waterfall" alt="Shivanasamudra Falls" />
+      <div class="card-body">
+        <h3>Shivanasamudra Falls</h3>
+        <p>Karnataka | Twin falls of geological wonder</p>
+        <a href="shivanasamudra.html">
+          <button>View Tours</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="card" id="others">
+      <img src="https://source.unsplash.com/400x300/?waterfall,india" alt="Hogenakkal" />
+      <div class="card-body">
+        <h3>Hogenakkal & More</h3>
+        <p>Hogenakkal (Tamil Nadu), Athirappilly (Kerala), Kempty (Uttarakhand)</p>
+        <a href="Hogenakkal.html">
+          <button>View Tours</button>
+        </a>
+      </div>
+    </div>
+
+    <!-- New Waterfalls -->
+
+
+    <div class="card" id="bhagsu">
+      <img src="https://source.unsplash.com/400x300/?bhagsu,waterfall" alt="Bhagsu Falls" />
+      <div class="card-body">
+        <h3>Bhagsu Falls</h3>
+        <p>Himachal Pradesh | Serene hill waterfall surrounded by deodar forests</p>
+        <a href="bhagsu.html">
+          <button>View Tours</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="card" id="kempty">
+      <img src="https://source.unsplash.com/400x300/?kempty,waterfall" alt="Kempty Falls" />
+      <div class="card-body">
+        <h3>Kempty Falls</h3>
+        <p>Uttarakhand | Popular picnic spot | Cascading waters amidst mountains</p>
+        <a href="kempty.html">
+          <button>View Tours</button>
+        </a>
+      </div>
+    </div>
+
+   
+
+    <div class="card" id="kunzum">
+      <img src="https://source.unsplash.com/400x300/?kunzum,waterfall" alt="Kunzum Falls" />
+      <div class="card-body">
+        <h3>Kunzum Falls</h3>
+        <p>Himachal Pradesh | Stunning seasonal waterfall in the Himalayas</p>
+        <a href="kunzum.html">
+          <button>View Tours</button>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  © 2025 Waterfall Explorer — Powered by Nature & Innovation
+</footer>
+
+</body>
+</html>
